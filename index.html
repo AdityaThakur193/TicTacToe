@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe - AI Levels</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tic Tac Toe</h1>
+      <h2 id="modeSubtitle">Player X vs Player O</h2>
+    </header>
+
+    <section class="game-mode" aria-label="Game mode selection">
+      <label><input type="radio" name="gameMode" value="pvp" checked /> Player vs Player</label>
+      <label><input type="radio" name="gameMode" value="pvc" /> Player vs AI</label>
+    </section>
+
+    <section class="difficulty-mode" aria-label="AI difficulty selection" style="display:none;">
+      <label><input type="radio" name="difficulty" value="easy" checked /> Easy</label>
+      <label><input type="radio" name="difficulty" value="medium" /> Medium</label>
+      <label><input type="radio" name="difficulty" value="hard" /> Hard</label>
+    </section>
+
+    <main class="game-container">
+      <div
+        class="grid"
+        id="gameBoard"
+        role="grid"
+        aria-label="Tic Tac Toe Game Board"
+      >
+        <div class="square" role="gridcell" aria-label="Square 1" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 2" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 3" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 4" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 5" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 6" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 7" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 8" tabindex="0"></div>
+        <div class="square" role="gridcell" aria-label="Square 9" tabindex="0"></div>
+      </div>
+    </main>
+
+    <section class="info">
+      <p id="turnIndicator" class="turn-indicator" aria-live="polite" aria-atomic="true">Player X's turn</p>
+      <div class="controls">
+        <button id="restartButton" class="btn" type="button">Restart Game</button>
+        <button id="toggleTheme" class="btn" type="button">
+          Toggle Dark/Light Mode
+        </button>
+        <button id="resetScoresButton" class="btn" type="button">Reset Scores</button>
+      </div>
+      <div class="scoreboard" aria-live="polite" aria-atomic="true">
+        <h3>Scoreboard</h3>
+        <p id="scoreboard">X: 0 | O: 0 | Draws: 0</p>
+      </div>
+    </section>
+  </div>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
